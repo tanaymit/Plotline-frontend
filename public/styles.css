@@ -1,21 +1,38 @@
 body {
-    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: 'Barlow', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 .tooltip-form {
-    background-color: whitesmoke;
+    background-color: #F5F5F5;
     width: 50%;
     float: left;
-    margin: 20px;
-    padding: 10px;
+    margin: 50px;
+    padding: 45px;
+    border-radius: 23px;
 }
 
 .preview {
-    background-color: beige;
     width: 30%;
     float: right;
-    margin: 80px;
-    padding: 20px;
+
+}
+
+label{
+display: flex;
+margin-bottom: 6px;
+margin-top: 12px;
+font-size: 17px;
+font-style: normal;
+font-weight:600;
+line-height: 18px; 
+}
+
+.preview img{
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    width: 42%;
+    height: auto;
 }

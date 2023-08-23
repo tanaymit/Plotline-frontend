@@ -2,7 +2,9 @@ import React from "react";
 
 function Preview(){
     return(
-        <div class="preview">preview</div>
+        <div class="preview">
+            <img src="./smartphone.webp" alt="" srcset="" />
+        </div>
     ); 
 }
 
