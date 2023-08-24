@@ -13,6 +13,7 @@ function Form(){
       >
         <label>Target Element</label>
     <Select
+      size="large"
       defaultValue="b1"
       style={{
         width: '100%',

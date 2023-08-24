@@ -14,6 +14,7 @@ body {
 }
 
 .preview {
+    /* margin: 60px; */
     width: 30%;
     float: right;
 
@@ -36,3 +37,54 @@ line-height: 18px;
     width: 42%;
     height: auto;
 }
+
+.speech {
+
+     font-size: 16px;
+
+    color: #fff;
+    background: black;
+    text-align: center;
+    position: absolute;
+    top: 125px;
+    right: 370px;
+    padding: 10px;
+    border-radius: 10px;
+    /* margin: 50px auto; */
+    max-width: 150px;
+  }
+
+  .speech::after {
+    /* (B1-1) ATTACH TRANSPARENT BORDERS */
+    content: "";
+    border: 20px solid transparent;
+   
+    /* (B1-2) NECESSARY TO POSITION THE "TAIL" */
+    position: absolute;
+  }
+   
+  /* (B2) BOTTOM "CALLOUT TAIL" */
+  .bottom.speech::after {
+    /* (B2-1) DOWN TRIANGLE */
+    border-top-color: black;
+    border-bottom: 0;
+   
+    /* (B2-2) POSITION AT BOTTOM */
+    bottom: -10px; left: 50%;
+    margin-left: -20px;
+  }
+
+  .top.speech::after {
+    /* (C1-1) UP TRIANGLE */
+    border-bottom-color: black;
+    border-top: 0;
+    top: -10px; left: 50%;
+    margin-left: -20px;
+  }
+  .tooltip-pos{
+    display: flex;
+  }
+  
+  .btn1 {
+
+  }
