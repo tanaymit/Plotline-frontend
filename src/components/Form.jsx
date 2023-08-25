@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import { InputNumber,Input, Select, Space } from 'antd';
 
-function Form({buttonValue,tooltipText}){
+function Form({buttonValue,tooltipText,textsize,paddingsize}){
 
   //send and maintain selected button value
   const [btn,setBtn] = useState('');
@@ -18,12 +18,26 @@ const [tooltipTest,setTooltipText] = useState('Text goes here');
 const handleTooltipText = (text) => {
   setTooltipText(`${text.target.value}`);
   tooltipText(`${text.target.value}`);
-}
+};
+
+//textsize handling
+const [textSize,setTestSize] = useState();
+
+const handleTextSize = (size) => {
+  setTestSize(`${size}`);
+  textsize(`${size}`);
+};
+
+//padding handling
+const [paddingSize,setPaddingSize] = useState();
+
+const handlePaddingSize = (size) => {
+  setPaddingSize(`${size}`);
+  paddingsize(`${size}`);
+};
 
     return(
         <div class="tooltip-form">
-          {/* <h1>{btn}</h1>
-          <h1>{tooltipTest}</h1> */}
         <Space
         direction="vertical"
         style={{
@@ -70,11 +84,11 @@ const handleTooltipText = (text) => {
 
     <Space direction="vertical">
     <label>Text Size</label>
-    <InputNumber size="large" min={1} max={10} defaultValue={3} style={{width: '350px', marginRight: '135px'}}/>
+    <InputNumber onChange={handleTextSize} size="large" min={1} max={10} defaultValue={3} style={{width: '350px', marginRight: '135px'}}/>
     </Space>
     <Space direction="vertical">
     <label>Padding</label>
-    <InputNumber size="large" min={1} max={10} defaultValue={3} style={{width: '350px'}}/>
+    <InputNumber onChange={handlePaddingSize} size="large" min={1} max={10} defaultValue={3} style={{width: '350px'}}/>
     </Space>
 
     </Space>
