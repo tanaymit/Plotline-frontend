@@ -9,12 +9,21 @@ function App(){
     const buttonValue = (childdata) => {
         setBtnVal(childdata);
     }
+
+    //get tooltip text
+    const [text,getText] = useState('text goes here');
+    const tooltipTextValue = (textvalue) => {
+        getText(textvalue);
+    }
+
     return(
         <div>
-            <h1>{btnval}</h1>
-            <Form buttonValue = {buttonValue}/>
+            {/* <h1>{btnval}</h1> */}
+            <Form buttonValue = {buttonValue} tooltipText = {tooltipTextValue}/>
             <Preview 
                 btn = {btnval}
+                tooltipText = {text}
+                
             />
             
         </div>

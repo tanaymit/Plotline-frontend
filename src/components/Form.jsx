@@ -1,10 +1,10 @@
 import React,{useState} from "react";
 import { InputNumber,Input, Select, Space } from 'antd';
 
-function Form({buttonValue}){
+function Form({buttonValue,tooltipText}){
 
+  //send and maintain selected button value
   const [btn,setBtn] = useState('');
-
   const handleButtonChange = (value) => {
     
     setBtn(`${value}`);
@@ -12,11 +12,18 @@ function Form({buttonValue}){
     
   };
 
+//maintain state of tooltip text
+const [tooltipTest,setTooltipText] = useState('Text goes here');
 
+const handleTooltipText = (text) => {
+  setTooltipText(`${text.target.value}`);
+  tooltipText(`${text.target.value}`);
+}
 
     return(
         <div class="tooltip-form">
-          <h1>{btn}</h1>
+          {/* <h1>{btn}</h1>
+          <h1>{tooltipTest}</h1> */}
         <Space
         direction="vertical"
         style={{
@@ -56,7 +63,7 @@ function Form({buttonValue}){
         ]}
     />
     <label>Tooltip Text</label>
-    <Input size="large" placeholder="Input"/>
+    <Input size="large" placeholder="Input" onChange={handleTooltipText}  on/>
     </Space>
     
     <Space>

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 
-function Tooltip({text,children,styleclass}){
+function Tooltip({text,children,styleclass,styleByUser}){
 
     const [isVisible,setIsVisible] = useState(false);
 
@@ -10,7 +10,7 @@ function Tooltip({text,children,styleclass}){
         onMouseEnter={() => setIsVisible(true)}
         onMouseLeave={() => setIsVisible(false)}>
         {children}
-        {isVisible && <div class={styleclass}>{text}</div>}
+        {isVisible && <div class={styleclass} style={styleByUser} >{text}</div>}
         
     
     </div>
