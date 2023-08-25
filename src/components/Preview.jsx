@@ -8,11 +8,11 @@ function Preview(props) {
 
 
 
-    const tooltipStyle1 = { color: 'white', background: 'black', fontSize: `${props.btn === 'b1' ? props.textsize : 15}px`, top: '125px', right: '400px', padding: `${props.btn === 'b1' ? props.padsize : 9}px`, borderRadius: '9px', maxWidth: '150px' };
-    const tooltipStyle2 = { color: 'white', background: 'black', fontSize: `${props.btn === 'b2' ? props.textsize : 15}px`, top: '125px', right: '200px', padding: `${props.btn === 'b2' ? props.padsize : 9}px`, borderRadius: '9px', maxWidth: '150px' };
-    const tooltipStyle3 = { color: 'white', background: 'black', fontSize: `${props.btn === 'b3' ? props.textsize : 15}px`, top: '395px', right: '300px', padding: `${props.btn === 'b3' ? props.padsize : 9}px`, borderRadius: '9px', maxWidth: '150px' };
-    const tooltipStyle4 = { color: 'white', background: 'black', fontSize: `${props.btn === 'b4' ? props.textsize : 15}px`, top: '600px', right: '400px', padding: `${props.btn === 'b4' ? props.padsize : 9}px`, borderRadius: '9px', maxWidth: '150px' };
-    const tooltipStyle5 = { color: 'white', background: 'black', fontSize: `${props.btn === 'b5' ? props.textsize : 15}px`, top: '600px', right: '200px', padding: `${props.btn === 'b5' ? props.padsize : 9}px`, borderRadius: '9px', maxWidth: '150px' };
+    const tooltipStyle1 = { color: `${props.btn === 'b1' ? props.textcolor : 'white'}`, background: `${props.btn === 'b1' ? props.bgcolor : 'black'}`, fontSize: `${props.btn === 'b1' ? props.textsize : 15}px`, top: '125px', right: '400px', padding: `${props.btn === 'b1' ? props.padsize : 9}px`, borderRadius: `${props.btn === 'b1' ? props.radius : 9}px`, maxWidth: `${props.btn === 'b1' ? props.maxwidth : 150}px` };
+    const tooltipStyle2 = { color: `${props.btn === 'b2' ? props.textcolor : 'white'}`, background: `${props.btn === 'b2' ? props.bgcolor : 'black'}`, fontSize: `${props.btn === 'b2' ? props.textsize : 15}px`, top: '125px', right: '200px', padding: `${props.btn === 'b2' ? props.padsize : 9}px`, borderRadius: `${props.btn === 'b2' ? props.radius : 9}px`, maxWidth: `${props.btn === 'b2' ? props.maxwidth : 150}px` };
+    const tooltipStyle3 = { color: `${props.btn === 'b3' ? props.textcolor : 'white'}`, background: `${props.btn === 'b3' ? props.bgcolor : 'black'}`, fontSize: `${props.btn === 'b3' ? props.textsize : 15}px`, top: '395px', right: '300px', padding: `${props.btn === 'b3' ? props.padsize : 9}px`, borderRadius: `${props.btn === 'b3' ? props.radius : 9}px`, maxWidth: `${props.btn === 'b3' ? props.maxwidth : 150}px` };
+    const tooltipStyle4 = { color: `${props.btn === 'b4' ? props.textcolor : 'white'}`, background: `${props.btn === 'b4' ? props.bgcolor : 'black'}`, fontSize: `${props.btn === 'b4' ? props.textsize : 15}px`, top: '600px', right: '400px', padding: `${props.btn === 'b4' ? props.padsize : 9}px`, borderRadius: `${props.btn === 'b4' ? props.radius : 9}px`, maxWidth: `${props.btn === 'b4' ? props.maxwidth : 150}px` };
+    const tooltipStyle5 = { color: `${props.btn === 'b5' ? props.textcolor : 'white'}`, background: `${props.btn === 'b5' ? props.bgcolor : 'black'}`, fontSize: `${props.btn === 'b5' ? props.textsize : 15}px`, top: '600px', right: '200px', padding: `${props.btn === 'b5' ? props.padsize : 9}px`, borderRadius: `${props.btn === 'b5' ? props.radius : 9}px`, maxWidth: `${props.btn === 'b5' ? props.maxwidth : 150}px` };
 
     const textarr = ["text 1", "text 2", "text 3", "text 4", "text 5"];
     switch (props.btn) {
@@ -37,7 +37,6 @@ function Preview(props) {
     }
     return (
         <div class="preview">
-
             <img src="./smartphone.webp" alt="" srcset="" />
             <div class="tooltip-pos">
 

@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import { InputNumber,Input, Select, Space } from 'antd';
 
-function Form({buttonValue,tooltipText,textsize,paddingsize}){
+function Form({buttonValue,tooltipText,textsize,paddingsize,textcolor,bgcolor,bdradius,maxwidth}){
 
   //send and maintain selected button value
   const [btn,setBtn] = useState('');
@@ -34,6 +34,38 @@ const [paddingSize,setPaddingSize] = useState();
 const handlePaddingSize = (size) => {
   setPaddingSize(`${size}`);
   paddingsize(`${size}`);
+};
+
+//textcolor handling
+const [textColor,setTextColor] = useState();
+
+const handleTextColor = (clr) => {
+  setTextColor(`${clr.target.value}`);
+  textcolor(`${clr.target.value}`);
+};
+
+//textcolor handling
+const [bgColor,setBgColor] = useState();
+
+const handleBgColor = (bgclr) => {
+  setBgColor(`${bgclr.target.value}`);
+  bgcolor(`${bgclr.target.value}`);
+};
+
+//border radius handling
+const [radius,setRadius] = useState();
+
+const handleRadius = (rad) => {
+  setRadius(`${rad}`);
+  bdradius(`${rad}`);
+};
+
+//max width handling
+const [maxWidth,setMaxWidth] = useState();
+
+const handleMaxWidth = (w) => {
+  setMaxWidth(`${w}`);
+  maxwidth(`${w}`);
 };
 
     return(
@@ -95,19 +127,19 @@ const handlePaddingSize = (size) => {
 
     <Space direction="vertical" style={{width: '100%'}}>
     <label>Text Color</label>
-    <Input size="large" placeholder="Input"/>
+    <Input size="large" placeholder="Input" onChange={handleTextColor}/>
     <label>Background Color</label>
-    <Input size="large" placeholder="Input"/>
+    <Input size="large" placeholder="Input" onChange={handleBgColor}/>
     </Space>
   
 
     <Space direction="vertical">
     <label>Corner Radius</label>
-    <InputNumber size="large" min={1} max={10} defaultValue={3} style={{width: '350px', marginRight: '135px'}}/>
+    <InputNumber onChange={handleRadius} size="large" min={1} max={10} defaultValue={3} style={{width: '350px', marginRight: '135px'}}/>
     </Space>
     <Space direction="vertical">
     <label>Tooltip Width</label>
-    <InputNumber size="large" min={1} max={10} defaultValue={3} style={{width: '350px'}}/>
+    <InputNumber onChange={handleMaxWidth} size="large" min={1} max={10} defaultValue={5} style={{width: '350px'}}/>
     </Space>
 
     <Space direction="vertical">
