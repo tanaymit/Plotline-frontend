@@ -11,7 +11,7 @@ function App(){
         setBtnVal(childdata);
     }
     //get tooltip text
-    const [text,getText] = useState('text goes here');
+    const [text,getText] = useState('enter text 1');
     const tooltipTextValue = (textvalue) => {
         getText(textvalue);
     }
@@ -45,6 +45,16 @@ function App(){
     const  maxWidth = (bdradiusvalue) => {
         getMaxWidth(bdradiusvalue);
     }
+    //get arrow width
+    const [arrowwidth,getArrowWidth] = useState(5);
+    const  arrowWidth = (arwvalue) => {
+        getArrowWidth(arwvalue);
+    }
+    //get arrow height
+    const [arrowheight,getArrowHeight] = useState(0);
+    const  arrowHeight = (arhvalue) => {
+        getArrowHeight(arhvalue);
+    }
     return(
         <div>
             <Form buttonValue = {buttonValue} 
@@ -55,6 +65,8 @@ function App(){
                 bgcolor={bgColor}
                 bdradius={bdRadius}
                 maxwidth={maxWidth}
+                arrowwidth={arrowWidth}
+                arrowheight={arrowHeight}
             />
 
 
@@ -67,6 +79,8 @@ function App(){
                 bgcolor={bgclr}
                 radius={parseInt(radius,10)*3}
                 maxwidth={parseInt(maxwidth,10)*30}
+                arrowwidth={parseInt(arrowwidth,10)*2}
+                arrowheight={parseInt(arrowheight,10)}
             />
             
         </div>

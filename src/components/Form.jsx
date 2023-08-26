@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import { InputNumber,Input, Select, Space } from 'antd';
 
-function Form({buttonValue,tooltipText,textsize,paddingsize,textcolor,bgcolor,bdradius,maxwidth}){
+function Form({buttonValue,tooltipText,textsize,paddingsize,textcolor,bgcolor,bdradius,maxwidth,arrowwidth,arrowheight}){
 
   //send and maintain selected button value
   const [btn,setBtn] = useState('');
@@ -66,6 +66,20 @@ const [maxWidth,setMaxWidth] = useState();
 const handleMaxWidth = (w) => {
   setMaxWidth(`${w}`);
   maxwidth(`${w}`);
+};
+//arrow width handling
+const [arrowWidth,setArrowWidth] = useState();
+
+const handleArrowWidth = (arrw) => {
+  setArrowWidth(`${arrw}`);
+  arrowwidth(`${arrw}`);
+};
+//arrow height handling
+const [arrowHeight,setArrowHeight] = useState();
+
+const handleArrowHeight = (arrh) => {
+  setArrowHeight(`${arrh}`);
+  arrowheight(`${arrh}`);
 };
 
     return(
@@ -144,11 +158,11 @@ const handleMaxWidth = (w) => {
 
     <Space direction="vertical">
     <label>Arrow Width</label>
-    <InputNumber size="large" min={1} max={10} defaultValue={3} style={{width: '350px', marginRight: '135px'}}/>
+    <InputNumber onChange={handleArrowWidth} size="large" min={1} max={10} defaultValue={5} style={{width: '350px', marginRight: '135px'}}/>
     </Space>
     <Space direction="vertical">
     <label>Arrow Height</label>
-    <InputNumber size="large" min={1} max={10} defaultValue={3} style={{width: '350px'}}/>
+    <InputNumber onChange={handleArrowHeight} size="large" min={0} max={10} defaultValue={1} style={{width: '350px'}}/>
     </Space>
     </div>
     )
