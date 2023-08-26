@@ -40,23 +40,23 @@ function Preview(props) {
             <img src="./smartphone.webp" alt="" srcset="" />
             <div class="tooltip-pos">
 
-                <Tooltip text={textarr[0]} styleclass={"speech"} styleByUser={tooltipStyle1} arrowWidth={props.btn === 'b1' ? props.arrowwidth : 10}>
+                <Tooltip text={textarr[0]} styleclass={"speech"} styleByUser={tooltipStyle1} arrcolor={props.btn === 'b1' ? props.bgcolor : 'black'} arrowWidth={props.btn === 'b1' ? props.arrowwidth : 10} imgurl={props.btn === 'b1' ? props.imgurl : ''}>
                     <Button style={{ position: 'absolute', top: '80px', right: '410px' }}>Button 1</Button>
                 </Tooltip>
 
-                <Tooltip text={textarr[1]} styleclass={"speech"} styleByUser={tooltipStyle2} arrowWidth={props.btn === 'b2' ? props.arrowwidth : 10}>
+                <Tooltip text={textarr[1]} styleclass={"speech"} styleByUser={tooltipStyle2} arrcolor={props.btn === 'b2' ? props.bgcolor : 'black'} arrowWidth={props.btn === 'b2' ? props.arrowwidth : 10} imgurl={props.btn === 'b2' ? props.imgurl : ''}>
                     <Button style={{ position: 'absolute', top: '80px', right: '215px' }}>Button 2</Button>
                 </Tooltip>
 
-                <Tooltip text={textarr[2]} styleclass={"speech"} styleByUser={tooltipStyle3} arrowWidth={props.btn === 'b3' ? props.arrowwidth : 10}>
+                <Tooltip text={textarr[2]} styleclass={"speech"} styleByUser={tooltipStyle3} arrcolor={props.btn === 'b3' ? props.bgcolor : 'black'} arrowWidth={props.btn === 'b3' ? props.arrowwidth : 10} imgurl={props.btn === 'b3' ? props.imgurl : ''}>
                     <Button style={{ position: 'absolute', top: '350px', right: '320px' }}>Button 3</Button>
                 </Tooltip>
 
-                <Tooltip text={textarr[3]} styleclass={"speech"} styleByUser={tooltipStyle4} arrowWidth={props.btn === 'b4' ? props.arrowwidth : 10}>
+                <Tooltip text={textarr[3]} styleclass={"speech"} styleByUser={tooltipStyle4} arrcolor={props.btn === 'b4' ? props.bgcolor : 'black'} arrowWidth={props.btn === 'b4' ? props.arrowwidth : 10} imgurl={props.btn === 'b4' ? props.imgurl : ''}>
                     <Button style={{ position: 'absolute', top: '655px', right: '410px' }}>Button 4</Button>
                 </Tooltip>
 
-                <Tooltip text={textarr[4]} styleclass={"speech"} styleByUser={tooltipStyle5} arrowWidth={props.btn === 'b5' ? props.arrowwidth : 10}>
+                <Tooltip text={textarr[4]} styleclass={"speech"} styleByUser={tooltipStyle5} arrcolor={props.btn === 'b5' ? props.bgcolor : 'black'} arrowWidth={props.btn === 'b5' ? props.arrowwidth : 10} imgurl={props.btn === 'b5' ? props.imgurl : ''}>
                     <Button style={{ position: 'absolute', top: '655px', right: '215px' }}>Button 5</Button>
                 </Tooltip>
 

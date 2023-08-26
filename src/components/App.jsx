@@ -55,6 +55,11 @@ function App(){
     const  arrowHeight = (arhvalue) => {
         getArrowHeight(arhvalue);
     }
+    //get img URL
+    const [imgurl,getImgURL] = useState('');
+    const imgURL = (urlvalue) => {
+        getImgURL(urlvalue);
+    }
     return(
         <div>
             <Form buttonValue = {buttonValue} 
@@ -67,6 +72,7 @@ function App(){
                 maxwidth={maxWidth}
                 arrowwidth={arrowWidth}
                 arrowheight={arrowHeight}
+                imgurl={imgURL}
             />
 
 
@@ -81,6 +87,7 @@ function App(){
                 maxwidth={parseInt(maxwidth,10)*30}
                 arrowwidth={parseInt(arrowwidth,10)*2}
                 arrowheight={parseInt(arrowheight,10)}
+                imgurl={imgurl}
             />
             
         </div>
