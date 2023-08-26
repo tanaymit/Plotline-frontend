@@ -14,6 +14,7 @@ function Form({buttonValue,tooltipText,textsize,paddingsize,textcolor,bgcolor,bd
 
 //maintain state of tooltip text
 const [tooltipTest,setTooltipText] = useState('Text goes here');
+console.log(tooltipTest);
 
 const handleTooltipText = (text) => {
   setTooltipText(`${text.target.value}`);
@@ -22,7 +23,7 @@ const handleTooltipText = (text) => {
 
 //textsize handling
 const [textSize,setTestSize] = useState();
-
+console.log(textSize);
 const handleTextSize = (size) => {
   setTestSize(`${size}`);
   textsize(`${size}`);
@@ -30,7 +31,7 @@ const handleTextSize = (size) => {
 
 //padding handling
 const [paddingSize,setPaddingSize] = useState();
-
+console.log(paddingSize);
 const handlePaddingSize = (size) => {
   setPaddingSize(`${size}`);
   paddingsize(`${size}`);
@@ -38,7 +39,7 @@ const handlePaddingSize = (size) => {
 
 //textcolor handling
 const [textColor,setTextColor] = useState();
-
+console.log(textColor);
 const handleTextColor = (clr) => {
   setTextColor(`${clr.target.value}`);
   textcolor(`${clr.target.value}`);
@@ -46,7 +47,7 @@ const handleTextColor = (clr) => {
 
 //textcolor handling
 const [bgColor,setBgColor] = useState();
-
+console.log(bgColor);
 const handleBgColor = (bgclr) => {
   setBgColor(`${bgclr.target.value}`);
   bgcolor(`${bgclr.target.value}`);
@@ -54,7 +55,7 @@ const handleBgColor = (bgclr) => {
 
 //border radius handling
 const [radius,setRadius] = useState();
-
+console.log(radius);
 const handleRadius = (rad) => {
   setRadius(`${rad}`);
   bdradius(`${rad}`);
@@ -62,21 +63,21 @@ const handleRadius = (rad) => {
 
 //max width handling
 const [maxWidth,setMaxWidth] = useState();
-
+console.log(maxWidth);
 const handleMaxWidth = (w) => {
   setMaxWidth(`${w}`);
   maxwidth(`${w}`);
 };
 //arrow width handling
 const [arrowWidth,setArrowWidth] = useState();
-
+console.log(arrowWidth);
 const handleArrowWidth = (arrw) => {
   setArrowWidth(`${arrw}`);
   arrowwidth(`${arrw}`);
 };
 //arrow height handling
 const [arrowHeight,setArrowHeight] = useState();
-
+console.log(arrowHeight);
 const handleArrowHeight = (arrh) => {
   setArrowHeight(`${arrh}`);
   arrowheight(`${arrh}`);
